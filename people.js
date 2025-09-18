@@ -50,6 +50,7 @@ class Pessoa {
 }
 
 let pessoa1 = new Pessoa("Brayan", 16, 75, 1.75);
-// let pessoa2 = new Pessoa("Adrian", 23, 105, 1.73);
+let pessoa2 = new Pessoa("Adrian", 23, 105, 1.73);
 
 console.log(pessoa1.perfil());
+console.log(pessoa2.perfil());

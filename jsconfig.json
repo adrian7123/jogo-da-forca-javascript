@@ -4,7 +4,8 @@
     "resolveJsonModule": true,
     "target": "es2020",
     "module": "nodenext",
-    "moduleResolution": "nodenext"
+    "moduleResolution": "nodenext",
+    "rootDir": "."
   },
   "exclude": [
     "dist",

@@ -1,5 +1,5 @@
-import { ForcaRender } from "./render";
+import { Game } from "./core/game.js";
 
-const fr = new ForcaRender();
+const core = new Game();
 
-console.log(fr.render());
+await core.init();
