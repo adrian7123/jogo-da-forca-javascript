@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node src/example.js",
+    "example": "node src/example.js"
   },
   "author": "",
   "license": "ISC",
