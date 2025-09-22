@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  background: #1a1a1a;
+  color: #00ff00;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.terminal-container {
+  width: 90%;
+  max-width: 800px;
+  height: 600px;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: #333;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #555;
+}
+
+.terminal-title {
+  color: #fff;
+  font-size: 14px;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.minimize {
+  background: #ffbd2e;
+}
+
+.maximize {
+  background: #28ca42;
+}
+
+.close {
+  background: #ff5f56;
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 16px;
+  background: #000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#terminal-output {
+  flex: 1;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.prompt {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+#terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  outline: none;
+  caret-color: #00ff00;
+}
+
+#terminal-input::placeholder {
+  color: #666;
+}
+
+/* Scrollbar styling */
+#terminal-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+#terminal-output::-webkit-scrollbar-track {
+  background: #111;
+}
+
+#terminal-output::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+#terminal-output::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Cursor animation */
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+/* Green glow effect */
+.terminal-container {
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+/* Output styling */
+.output-line {
+  margin: 2px 0;
+}
+
+.input-echo {
+  color: #00ff00;
+}
+
+.output-text {
+  color: #00ff00;
+}
+
+.error-text {
+  color: #ff4444;
+}
+
+.success-text {
+  color: #44ff44;
+}
+
+.warning-text {
+  color: #ffff44;
+}
